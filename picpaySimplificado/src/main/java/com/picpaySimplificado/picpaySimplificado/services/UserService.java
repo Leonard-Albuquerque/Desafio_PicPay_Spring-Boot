@@ -34,7 +34,7 @@ public class UserService {
 
     public User createUser(UserDTO data) {
         User newUser = new User(data);
-        this.setSaveUser(newUser);
+        this.SaveUser(newUser);
         return newUser;
     }
 
@@ -43,7 +43,7 @@ public class UserService {
         return this.repository.findAll();
     }
 
-    public void setSaveUser(User user) {
+    public void SaveUser(User user) {
         this.repository.save(user);
     }
 }
